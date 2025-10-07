@@ -6,10 +6,19 @@ docker exec <nombre contenedor> <comando> <argumentos opcionales>
 ```
 # COMPLETAR
 ### ¿Para qué se usa el comando ls?
+```
+En Linux se utiliza para listar los archivos de un directorio.
+```
 ### ¿Para qué sirve el argumento -l junto al comando ls?
+```
+Sirve para listar los archivos de un directorio con mayor detalle sobre cada archivo.
+```
 ### Usar el contenedor de jenkins creado previamente y ejecutar el comando ls con el argumento -l
-# COMPLETAR
-# COLOCAR UNA CAPTURA DE PANTALLA
+```
+ docker exec musing_noyce ls -l
+```
+<img width="641" height="479" alt="image" src="https://github.com/user-attachments/assets/f5f7ef4e-0638-4da0-bfea-fd9a5fa4f173" />
+
 
 ### Para ejecutar un shell interactivo en un contenedor de Docker especificado.
 El comando **docker exec** te permite acceder a la sesión shell de un contenedor en ejecución, estarás dentro del contenedor y podrás ejecutar comandos como si estuvieras en una terminal normal. 
@@ -43,7 +52,9 @@ Ejecutar
 ```
 whoami
 ```
-# COLOCAR UNA CAPTURA DE PANTALLA
+<img width="657" height="187" alt="image" src="https://github.com/user-attachments/assets/aa5f7b67-13fd-4a93-b038-d77cfe72fabe" />
+
+
 
 **Si se visualiza el mensaje command not found, considerar**
 El problema se debe a que no se ha asignado un terminal de salida al contenedor al ejecutar el comando. Cuando usas docker exec -i jenkins-server /bin/bash en Windows, el comando se ejecuta pero no hay un terminal asignado para mostrar la salida del comando ls.
@@ -63,9 +74,10 @@ docker exec -it <nombre contenedor> <programa o comando>
 
 ### Ahora puedes acceder al contenedor de jenkins y obtener la contraseña ubicada en /var/jenkins_home/secrets/initialAdminPassword
 
-# COMPLETAR
+# adecd3fd8867464491f6fea3b92bc4be
 
-### Colocar una captura de pantalla de la ventana que aparece después de colocar la contraseña.
+<img width="595" height="74" alt="image" src="https://github.com/user-attachments/assets/2b1696b5-ae2a-4486-bdfa-6eb324838c5f" />
+
 
 **Para este punto no es necesario continuar con la instalación de Jenkins**
 
